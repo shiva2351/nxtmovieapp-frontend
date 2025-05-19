@@ -35,7 +35,8 @@ class Home extends Component{
 <p>{each.genre} </p>
 <p>{each.releaseYear}</p>
 <p>{each.posterUrl }</p><p>
-{each.watched}</p> </li>)}</ol>
+{each.watched}</p>
+<img alt={each.title} src={each.posterUrl}/> </li>)}</ol>
             <button >Get</button>
         </div>
     }
