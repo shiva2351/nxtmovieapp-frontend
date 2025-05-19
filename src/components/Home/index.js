@@ -1,7 +1,8 @@
 
 import {Component} from "react";
 import Header from "../Header"
-import Footer from "../Footer";
+import Footer from "../Footer"; 
+import "./index.css"
 
 class Home extends Component{
     state={movieslist:[]}
@@ -27,7 +28,7 @@ class Home extends Component{
     render(){
         const movieslist=this.state.movieslist
         console.log(movieslist)
-        return <div>
+        return <div className="home-card">
             <Header />
             <ol>{movieslist.map(each=><li key={each.title}>
 <h1>{each.id}.{each.title}</h1>
