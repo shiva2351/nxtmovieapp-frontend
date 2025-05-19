@@ -1,6 +1,7 @@
 
 import {Component} from "react";
-
+import Header from "../Header"
+import Footer from "../Footer";
 
 class Home extends Component{
     state={movieslist:[]}
@@ -27,7 +28,7 @@ class Home extends Component{
         const movieslist=this.state.movieslist
         console.log(movieslist)
         return <div>
-            home
+            <Header />
             <ol>{movieslist.map(each=><li key={each.title}>
 <h1>{each.id}.{each.title}</h1>
 <p>
@@ -38,6 +39,7 @@ class Home extends Component{
 {each.watched}</p>
 <img alt={each.title} src={each.posterUrl}/> </li>)}</ol>
             <button >Get</button>
+            <Footer/>
         </div>
     }
 }

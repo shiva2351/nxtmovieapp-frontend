@@ -1,0 +1,11 @@
+.header-card{
+    border:2px solid red;
+}
+.header-list{
+    border:2px solid green;
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0%;
+    margin:20px;
+}

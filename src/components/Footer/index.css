@@ -1,0 +1,15 @@
+.footer-card{
+    border:2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-list{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0%;
+    margin:20px;
+}
