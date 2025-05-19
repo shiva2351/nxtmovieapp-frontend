@@ -4,7 +4,10 @@ import {Component} from "react";
 
 class Home extends Component{
     state={movieslist:[]}
-
+    componentDidMount(){
+        console.log("didmount")
+        this.getMovies()
+    }
     getMovies=async()=>{
         console.log("gettasks()")
         const res = await fetch('https://nxtmovieapp-backend.onrender.com/movies');
@@ -15,10 +18,25 @@ class Home extends Component{
         this.setState(()=>({movieslist:data}));
       
     }
+
+    updatemovie=async()=>{
+        console.log("update")
+        
+    }
     render(){
+        const movieslist=this.state.movieslist
+        console.log(movieslist)
         return <div>
             home
-            <button onClick={this.getMovies}>Get</button>
+            <ol>{movieslist.map(each=><li key={each.title}>
+<h1>{each.id}.{each.title}</h1>
+<p>
+{each.director}</p>
+<p>{each.genre} </p>
+<p>{each.releaseYear}</p>
+<p>{each.posterUrl }</p><p>
+{each.watched}</p> </li>)}</ol>
+            <button >Get</button>
         </div>
     }
 }
