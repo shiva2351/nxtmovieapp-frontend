@@ -30,8 +30,8 @@ class Home extends Component{
         console.log(movieslist)
         return <div className="home-card">
             <Header />
-            <ol>{movieslist.map(each=><li key={each.title}>
-<h1>{each.id}.{each.title}</h1>
+            <ol className="home-list">{movieslist.map(each=><li className="home-item" key={each.title}>
+<h1>{each.title}</h1>
 <p>
 {each.director}</p>
 <p>{each.genre} </p>

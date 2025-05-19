@@ -8,5 +8,14 @@
     justify-content: space-between;
     list-style-type: none;
     padding: 0%;
-    margin:20px;
+    flex-wrap: wrap;
+}
+.home-item{
+    border:2px solid pink;
+    background-color: pink;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width:400px;
+    height: 400px;
 }
